@@ -3,16 +3,16 @@
 
 if (isset($_POST['sendmail'])) {
 
-    // $name = $_POST['text'];
-    // $mail = $_POST['email'];
-    // $pnumber = $_POST['pnumber'];
-    // $massage = $_POST['Massage'];
+    $name = $_POST['text'];
+    $mail = $_POST['email'];
+    $pnumber = $_POST['pnumber'];
+    $massage = $_POST['Massage'];
 
-    // $to = "rustamtemburne123@gmail.com";
-    // $subject = "My mail";
-    // $txt = "Hello world!";
-    // $headers = "From: $mail" . "\r\n" .
-    //     "CC:rustamtemburne12@gmail.com ";
+    $to = "rustamtemburne123@gmail.com";
+    $subject = "My mail";
+    $txt = "Hello world!";
+    $headers = "From: $mail" . "\r\n" .
+        "CC:rustamtemburne12@gmail.com ";
 
     echo $to = "rustamtemburne123@gmail.com";
     echo "<br>";
