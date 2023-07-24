@@ -1,107 +1,148 @@
 <!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidebar Menu for Admin Dashboard </title>
-    <link rel="stylesheet" href="./style_sidebar.css" />
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <title>Hoverable Sidebar Menu HTML CSS & JavaScript</title>
+    <link rel="stylesheet" href="./Sidebar_style.css" />
+    <!-- Boxicons CSS -->
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap link  -->
+    <!-- Bootstrap     -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 </head>
 
-<body>
-    <nav class="sidebar">
+<body class="body1">
 
-        <a href="#" class="logo">MyApp</a>
+    <nav class="sidebar locked">
+        <div class="logo_items flex">
+            <span class="nav_image">
+                <img src="./img_logo/pexels-jessica-lewis-creative-1010519.jpg" alt="logo_img" />
+            </span>
+            <span class="logo_name">RUSTAM</span>
+            <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+            <i class="bx bx-x" id="sidebar-close"></i>
+        </div>
 
-        <div class="menu-content">
-            <ul class="menu-items">
-                <div class="menu-title container">
-                    <h2 style="color: blue;">Content</h2>
+        <div class="menu_container">
+            <div class="menu_items">
+                <ul class="menu_item">
+                    <div class="menu_title flex">
+                        <span class="title">Dashboard</span>
+                        <span class="line"></span>
+                    </div>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-home-alt"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-grid-alt"></i>
+                            <span>All Projects</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu_item">
+                    <div class="menu_title flex">
+                        <span class="title">Editor</span>
+                        <span class="line"></span>
+                    </div>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bxs-magic-wand"></i>
+                            <span>Magic Build</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-folder"></i>
+                            <span>New Projects</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-cloud-upload"></i>
+                            <span>Upload New</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu_item">
+                    <div class="menu_title flex">
+                        <span class="title">Setting</span>
+                        <span class="line"></span>
+                    </div>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-flag"></i>
+                            <span>Notice Board</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-award"></i>
+                            <span>Award</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-cog"></i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar_profile flex">
+                <span class="nav_image">
+                    <img src="images/profile.jpg" alt="logo_img" />
+                </span>
+                <div class="data_text">
+                    <span class="name">David Oliva</span>
+                    <span class="email">david@gmail.com</span>
                 </div>
-
-                <li class="item">
-                    <a href="#">Carousel</a>
-                </li>
-
-                <li class="item">
-                    <div class="submenu-item">
-                        <span>Electronics Items</span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-
-                    <ul class="menu-items submenu">
-                        <div class="menu-title">
-                            <i class="fa-solid fa-chevron-left"></i>
-                            Your submenu title
-                        </div>
-                        <li class="item">
-                            <a href="./Add_Product.php">Mobile</a>
-                        </li>
-                        <li class="item">
-                            <a href="#">Earephones</a>
-                        </li>
-                        <li class="item">
-                            <a href="#">Watchs </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="item">
-                    <div class="submenu-item">
-                        <span>Second submenu</span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-
-                    <ul class="menu-items submenu">
-                        <div class="menu-title">
-                            <i class="fa-solid fa-chevron-left"></i>
-                            Your submenu title
-                        </div>
-                        
-                        <li class="item">
-                            <a href="#">1 Second sublink</a>
-                        </li>
-                        <li class="item">
-                            <a href="#">2 Second sublink</a>
-                        </li>
-                        <li class="item">
-                            <a href="#">3 Second sublink</a>
-                        </li>
-                       
-                    </ul>
-                </li>
-
-                <li class="item">
-                    <a href="#">COMPUTERS & LAPTOP</a>
-                </li>
-
-                <li class="item">
-                    <a href="#">MAN’S CLOTHES</a>
-                </li>
-
-                <li class="item">
-                    <a href="#">WOMAN’S CLOTHES</a>
-                </li>
-
-            </ul>
+            </div>
         </div>
     </nav>
 
-    <nav class="navbar">
-        <i class="fa-solid fa-bars" id="sidebar-close"></i>
-        <h1 class="h1_style">Admin Dashboard Content</h1>
+    <!-- Navbar -->
+    <nav class="navbar flex" style="background-color: #eef5fe;">
 
+        <div class="container">
+            <div class="row">
+
+                <div class="col-2">
+                    <i class="bx bx-menu" id="sidebar-open"></i>
+                </div>
+
+                <div class="col-8">
+                    <input type="text" placeholder="Search..." class="search_box" />
+                </div>
+
+                <div class="col-2">
+                    <span class="nav_image">
+                        <img src="./img_logo/annie-spratt-wuc-KEIBrdE-unsplash.jpg" alt="logo_img" />
+                    </span>
+                </div>
+
+            </div>
+        </div>
     </nav>
 
-    <main class="main">
-        write your information hear...
-    </main>
+
+    <div class="container margin-auto">
+    sdhbchfbdj,mnn jkk j k 
+</div>
+
+   
+    
 
 
 
@@ -124,11 +165,14 @@
 
 
 
-    <!-- Bootstrap link  -->
+
+
+
+
+    <!-- Bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-
-    <script src="./script_sidebar.js"></script>
+    <script src="./Sidebar_script.js"></script>
 </body>
 
 </html>

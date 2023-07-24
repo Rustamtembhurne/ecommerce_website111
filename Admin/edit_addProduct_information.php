@@ -75,7 +75,7 @@ if (isset($_GET['edit_id'])) {
                     if (move_uploaded_file($_FILES['File']['tmp_name'], $target)) {
                         echo "<script>
                         alert('Your Data is Updated Successfully'); 
-                        window.location.href='insert.php';
+                        window.location.href='select_mobile.php';
                         </script>";
                     } else {
                         echo "<script>
@@ -129,7 +129,7 @@ if (isset($_GET['edit_id'])) {
 
 </head>
 
-<body>
+<body style="background-color:#eef5fe">
 
     <form class=" my-5 g-3 container font-weight-bold " id="registrationForm" method="POST" enctype="multipart/form-data" style="margin: auto; width: 750px;">
 

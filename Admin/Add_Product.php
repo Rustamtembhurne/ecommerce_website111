@@ -1,7 +1,7 @@
 <?php
 
 include "./connection.php";
-include "./select.php";
+include "./insert_mobile.php";
 
 
 
@@ -61,10 +61,6 @@ include "./select.php";
 
 
 
-
-
-
-
         <div class="row my-2">
 
             <!-- # File Uploading [pic & pdf] -->
@@ -99,13 +95,7 @@ include "./select.php";
             <!--**************************************************************-->
 
 
-
-
-
-
-
-
-            <div class="col-12 d-flex justify-content-center my-5">
+           <div class="col-12 d-flex justify-content-center my-5">
                 <button type="submit" name="Submit" class="btn btn-primary mx-5">Submit</button>
                 <button type="reset" class="btn btn-danger mx-5">Reset</button>
             </div>
