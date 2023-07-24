@@ -11,12 +11,12 @@ $(document).ready(function() {
       var fileSize = $('#fileInput')[0].files[0].size; // Get the file size in bytes
       var fileUpload = $('#fileInput')[0].files[0].name; // Get the file name
 
-      var fileSizeLimit = 5 * 1024 * 1024; // 3MB in bytes
+      var fileSizeLimit = 10 * 1024 * 1024; // 3MB in bytes
 
       // Check if the file size exceeds the limit
       if (fileSize > fileSizeLimit) {
         e.preventDefault(); // Prevent the form from submitting
-        alert('File size exceeds the limit. Please choose a file under 3MB.');
+         alert('File size exceeds the limit. Please choose a file under 10MB.');
       } else if (!fileUpload.match(/\.(jpg|pdf)$/i)) {
         e.preventDefault(); // Prevent the form from submitting
         alert('Only JPG and PDF formats are allowed.');
@@ -45,3 +45,7 @@ $(document).ready(function() {
       }
     });
   });
+
+
+
+

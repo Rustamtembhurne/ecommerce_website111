@@ -1,6 +1,6 @@
 <?php
 
-include "./connection.php";
+include "../connection.php";
 
 
 ?>
@@ -79,7 +79,7 @@ include "./connection.php";
 
 
                     <!-- EDIT INFORMATION  -->
-                    <td> <a href="./edit_addProduct_information.php ? edit_id=<?php echo $fetch['id'] ?>">Edit</a> / <a href="./corousel_delete.php  ? delete_id_corouset=<?php echo $fetch['id'] ?>">Delete</a> </td>
+                    <td> <a href="./corousel_edit_information.php ? edit_id_corousel =<?php echo $fetch['id'] ?>">Edit</a> / <a href="./corousel_delete.php  ? delete_id_corousel=<?php echo $fetch['id'] ?>">Delete</a> </td>
 
 
 

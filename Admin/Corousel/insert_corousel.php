@@ -1,6 +1,6 @@
 <?php
 
-include "./connection.php";
+include "../connection.php";
 
 
 if (isset($_POST['Submit'])) {
@@ -74,3 +74,6 @@ if (isset($_POST['Submit'])) {
         echo "<script>alert('Your Data is NOT insert')</script>";
     }
 }
+
+
+?>

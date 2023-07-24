@@ -107,8 +107,9 @@ include "./Admin/connection.php";
                      <div class="row border_1">
                         <div class="col-md-4">
 
-                           <div class="image_1">
-                              <img src="./Admin/Sidebar_Corosel_img/<?php echo $fetch['File_corousel_pic_grial']; ?>" alt=" YOUR First PIC " style="wixdth:100%; height:100%">
+                           <!-- <div class="image_1"> -->
+                           <div class="" >
+                              <img src="./Admin/Corousel/Sidebar_Corosel_img/<?php echo $fetch['File_corousel_pic_grial']; ?>" alt=" YOUR First PIC " style="wixdth:100%;">
                            </div>
                         </div>
 
@@ -121,7 +122,7 @@ include "./Admin/connection.php";
 
 
                         <div class="col-md-4 my-3">
-                           <div><img src="./Admin/Sidebar_Corosel_computer/<?php echo $fetch['carousal_img_computer']; ?>" alt=" YOUR Computer PIC " style="width:100%; height:100%"></div>
+                           <div><img src="./Admin/Corousel/Sidebar_Corosel_computer/<?php echo $fetch['carousal_img_computer']; ?>" alt=" YOUR Computer PIC " style="width:100%; height:100%"></div>
                         </div>
                      </div>
                   </div>
