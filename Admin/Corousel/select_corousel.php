@@ -35,6 +35,9 @@ include "../connection.php";
 
                 <th>UPLOAD Mobile[ IMG / File ]</th>
                 <th>UPLOAD Mobile[ IMG / File 2]</th>
+                <th>UPLOAD [Time/Date]</th>
+                <th>update [Time/Date]</th>
+                <th>EDIT INFORMATION</th>
 
 
 
@@ -73,13 +76,17 @@ include "../connection.php";
 
 
 
-                    <!-- TIME  -->
+                    <!-- LOGIN TIME  -->
                     <td><?php echo $fetch['login_time_carousal'] ?></td>
-                    <!-- <td><?php echo $fetch['update_time'] ?></td> -->
+
+                    <!--UPDATE TIME  -->
+                    <td><?php echo $fetch['update_time_carousal'] ?></td>
 
 
                     <!-- EDIT INFORMATION  -->
-                    <td> <a href="./corousel_edit_information.php ? edit_id_corousel =<?php echo $fetch['id'] ?>">Edit</a> / <a href="./corousel_delete.php  ? delete_id_corousel=<?php echo $fetch['id'] ?>">Delete</a> </td>
+                    <td> <a href="./corousel_edit_information.php?edit_id_corousel=<?php echo $fetch['id'] ?>">Edit</a> /
+                        <a href="./corousel_delete.php?delete_id_corousel=<?php echo $fetch['id'] ?>">Delete</a>
+                    </td>
 
 
 

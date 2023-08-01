@@ -2,8 +2,6 @@
 
 include "./Admin/connection.php";
 
-
-
 ?>
 
 
@@ -55,14 +53,14 @@ include "./Admin/connection.php";
          <nav class="navbar navbar-light bg-light justify-content-between">
             <div id="mySidenav" class="sidenav">
                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-               <a href="index.html">Home</a>
-               <a href="computers.html">Computers</a>
-               <a href="mans_clothes.html">Mans Clothes</a>
-               <a href="womans_clothes.html">Womans Clothes</a>
+               <a href="index.php">Home</a>
+               <a href="computers.php">Computers</a>
+               <a href="mans_clothes.php">Mans Clothes</a>
+               <a href="womans_clothes.php">Womans Clothes</a>
                <a href="contact.php">Contact</a>
             </div>
             <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()"><img src="images/toggle-icon.png"></span>
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a></a>
+            <a class="navbar-brand" href="index.php"><img src="images/logo.png"></a></a>
             <form class="form-inline ">
                <div class="login_text">
                   <ul>
@@ -108,7 +106,7 @@ include "./Admin/connection.php";
                         <div class="col-md-4">
 
                            <!-- <div class="image_1"> -->
-                           <div class="" >
+                           <div class="">
                               <img src="./Admin/Corousel/Sidebar_Corosel_img/<?php echo $fetch['File_corousel_pic_grial']; ?>" alt=" YOUR First PIC " style="wixdth:100%;">
                            </div>
                         </div>
@@ -149,6 +147,7 @@ include "./Admin/connection.php";
 
 
 
+   <!-- =========================================================== -->
 
 
 
@@ -157,25 +156,7 @@ include "./Admin/connection.php";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <!-- catagary section start -->
+   <!-- catagary and Mobile section start -->
    <div class="catagary_section layout_padding">
       <div class="container">
          <div class="catagary_main">
@@ -217,13 +198,13 @@ include "./Admin/connection.php";
                <div class="col-md-3">
                   <div class="box_man">
                      <h3 class="mobile_text"><?php echo $fetch['Device_Name'] ?></h3>
-                     <div class="mobile_img"><img src="./Admin/admin_images/<?php echo $fetch['File']; ?>" alt="YOUR MOBILE PIC" style="height: 400px; width: 350px;"> </div>
+                     <div class="mobile_img"><img src="./Admin/Mobile/admin_images/<?php echo $fetch['File']; ?>" alt="YOUR MOBILE PIC" style="height: 400px; width: 350px;"> </div>
 
                      <div class="cart_main">
                         <div class="cart_bt"><a href="#">Add To Cart</a></div>
                         <h4 class="samsung_text"><?php echo $fetch['Device_Brand_Name'] ?></h4>
                         <h6 class="rate_text"><a href="#"><?php echo ' ₹ ' . $fetch['Price']; ?></a></h6>
-                        <h6 class="rate_text_1"><?php echo $fetch['Discount'] . ' % '; ?></h6>
+                        <h6 class="rate_text_1"><?php echo ' ₹ ' . $fetch['Discount']; ?></h6>
                      </div>
                   </div>
                </div>
@@ -239,7 +220,24 @@ include "./Admin/connection.php";
 
       </div>
    </div>
-   <!-- catagary section end -->
+   <!-- catagary and Mobile section end -->
+
+
+
+
+
+
+
+
+   <!-- ========================================================= -->
+
+
+
+
+
+
+
+
    <!-- computers section start -->
    <div class="computers_section layout_padding">
       <div class="container">
@@ -250,49 +248,64 @@ include "./Admin/connection.php";
       <div class="container-fluid">
          <div class="computer_main">
             <div class="row">
-               <div class="col-md-4">
-                  <div class="computer_img"><img src="images/computer-img.png"></div>
-                  <h4 class="computer_text">COMPUTER</h4>
-                  <div class="computer_text_main">
-                     <h4 class="dell_text">Samsung</h4>
-                     <h6 class="price_text"><a href="#">$500</a></h6>
-                     <h6 class="price_text_1"><a href="#">$1000</a></h6>
+
+               <?php
+               $computer_select = "SELECT * FROM `computer_laptop_table` ORDER BY `id` DESC";
+               $computer_query = mysqli_query($conn, $computer_select);
+               while ($fetch = mysqli_fetch_assoc($computer_query)) {
+
+               ?>
+
+                  <div class="col-md-4">
+                     <div class="computer_img"><img src="./Admin/Computer_Laptop/Computer_Laptop_img/<?php echo $fetch['File']; ?>" alt="YOUR Computer PIC" style="height: 400px; width: 350px;"></div>
+                     <h4 class="computer_text"><?php echo $fetch['Device_Name']; ?></h4>
+                     <div class="computer_text_main">
+                        <h4 class="dell_text"><?php echo $fetch['Device_Brand_Name']; ?></h4>
+                        <h6 class="price_text"><a href="#"><?php echo " ₹ " . $fetch['Price']; ?> </a></h6>
+                        <h6 class="price_text_1"><a href="#"><?php echo " ₹ " .  $fetch['Discount']; ?></a></h6>
+                     </div>
+                     <div class="cart_bt_1"><a href="#">Add To Cart</a></div>
                   </div>
-                  <div class="cart_bt_1"><a href="#">Add To Cart</a></div>
-               </div>
-               <div class="col-md-4">
-                  <div class="computer_img"><img src="images/laptop-img.png"></div>
-                  <h4 class="computer_text">LAPTOP</h4>
-                  <div class="computer_text_main">
-                     <h4 class="dell_text">Dell</h4>
-                     <h6 class="price_text"><a href="#">$500</a></h6>
-                     <h6 class="price_text_1"><a href="#">$1000</a></h6>
-                  </div>
-                  <div class="cart_bt_1"><a href="#">Add To Cart</a></div>
-               </div>
-               <div class="col-md-4">
-                  <div class="computer_img"><img src="images/mac-img.png"></div>
-                  <h4 class="computer_text">macOS</h4>
-                  <div class="computer_text_main">
-                     <h4 class="dell_text">Apple</h4>
-                     <h6 class="price_text"><a href="#">$500</a></h6>
-                     <h6 class="price_text_1"><a href="#">$1000</a></h6>
-                  </div>
-                  <div class="cart_bt_1"><a href="#">Add To Cart</a></div>
-               </div>
+
+               <?php
+               }
+               ?>
+
+
             </div>
+
+
          </div>
       </div>
    </div>
    <!-- computers section end -->
+
+
+
+
+
+
+
    <!-- mans clothes section start -->
    <div class="mans_section layout_padding">
       <div class="container">
          <h1 class="computers_taital">Man’s clothes</h1>
       </div>
    </div>
+
    <div class="mans_section_2">
       <div class="container-fluid">
+
+
+         <?php
+         $man_select = "SELECT * FROM `man_cloths` ORDER BY `id` DESC";
+         $man_query = mysqli_query($conn, $man_select);
+         $fetch = mysqli_fetch_assoc($man_query)
+
+         ?>
+
+
+
          <div class="mans_main">
             <div class="row">
                <div class="col-md-6">
@@ -302,16 +315,44 @@ include "./Admin/connection.php";
                   <div class="read_bt"><a href="#">Buy Now</a></div>
                </div>
                <div class="col-md-6">
-                  <div class="image_3"><img src="images/img-3.png"></div>
+                  <div class="image_3"><img src="./Admin/Man_cloth/Man_cloth_pics/<?php echo $fetch['man_img']; ?>" alt="MAN PIC" style="height: 400px; width: 350px;"></div>
                </div>
             </div>
          </div>
+
+
+
+
       </div>
    </div>
    <!-- mans clothes section end -->
+
+
+
+
+
+
+   <!-- ================================================================= -->
+
+
+
+
+
+
    <!-- womans clothes section start -->
    <div class="computers_section layout_padding">
       <div class="container">
+
+         <?php
+         $select_women = "SELECT * FROM `womans_clothes` ORDER BY `id` DESC";
+
+         $query_women = mysqli_query($conn, $select_women);
+
+         // single pic ke liye *[ while loop ]* ki jarurat nahi padti hai...
+         $fetch = mysqli_fetch_assoc($query_women)
+
+         ?>
+
          <h1 class="womans_taital">woman’s clothes</h1>
          <div class="womans_section_2">
             <div class="row">
@@ -320,18 +361,35 @@ include "./Admin/connection.php";
                   <div class="read_bt"><a href="#">Buy Now</a></div>
                </div>
                <div class="col-md-6">
-                  <div class="image_4"><img src="images/img-4.png"></div>
+                  <div class="image_4"><img src="./Admin/Womans_clothes/womans_cloth_img/<?php echo $fetch['womans_img']; ?>" alt="YOUR MOBILE PIC" style="height: 400px; width: 350px;"></div>
                </div>
             </div>
          </div>
+
+
+
       </div>
    </div>
    <!-- womans clothes section end -->
+
+
+
+
+
+
+
+   <!-- ------------------------------------------------------------- -->
+
+
+
+
+
+
    <!-- footer section start -->
    <div class="footer_section layout_padding margin_top_90">
       <div class="container">
          <div class="footer_logo_main">
-            <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+            <div class="footer_logo"><a href="index.php"><img src="images/footer-logo.png"></a></div>
             <div class="social_icon">
                <ul>
                   <li><a href="#"><img src="images/fb-icon.png"></a></li>
@@ -356,11 +414,11 @@ include "./Admin/connection.php";
                   <h4 class="adderss_text">Menu</h4>
                   <div class="footer_menu">
                      <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="computers.html">Computers</a></li>
-                        <li><a href="Mans_clothes.html">Mans Clothes</a></li>
-                        <li><a href="womans_clothes.html">Womans Clothes</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="computers.php">Computers</a></li>
+                        <li><a href="Mans_clothes.php">Mans Clothes</a></li>
+                        <li><a href="womans_clothes.php">Womans Clothes</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                      </ul>
                   </div>
                </div>

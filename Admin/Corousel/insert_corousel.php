@@ -27,12 +27,11 @@ if (isset($_POST['Submit'])) {
     // # Date & Time...
     //////////////////////////////////////////////////////////////////////
     date_default_timezone_set('Asia/Kolkata');
-    $Date_Time = date('Y-m-d H:i:sa');
+    $Date_Time1 = date('Y-m-d H:i:sa');
 
 
 
-
-    $insert = "INSERT INTO `carousal`(`File_corousel_pic_grial`,`carousal_img_computer`, `login_time_carousal`) VALUES ('$file','$file1', '$Date_Time')";
+    $insert = "INSERT INTO `carousal`(`File_corousel_pic_grial`,`carousal_img_computer`, `login_time_carousal`) VALUES ('$file','$file1', '$Date_Time1')";
 
 
     $query = mysqli_query($conn, $insert);
@@ -42,24 +41,20 @@ if (isset($_POST['Submit'])) {
 
     if ($query) {
 
-        if ($_FILES['File_corousel_pic_grial']['size'] > 10 * 1024 * 1024  && $_FILES['carousal_img_computer']['size'] > 3 * 1024 * 1024) {   // 3mb
+        if ($_FILES['File_corousel_pic_grial']['size'] > 10 * 1024 * 1024  && $_FILES['carousal_img_computer']['size'] > 10 * 1024 * 1024) {   // 3mb
             echo "<script>
-            alert('File size is too large.');
+            alert('File size is too large, file select under 10 mb.');
             window.location.href='select_corousel.php';
             </script>";
         }
-        // else if (file_exists($target)) {
-        //     echo "<script>
-        //     alert('File already exists.');
-        //     window.location.href='Add_Product.php';
-        //     </script>";
-        // }
-        else if ($fileupload != "jpg" && $fileupload != "pdf" &&  $fileupload1 != "jpg" && $fileupload1 != "pdf") {
+        
+        else if ($fileupload != "jpg" && $fileupload != "pdf" && $fileupload != "png" && $fileupload1 != "jpg" && $fileupload1 != "pdf" && $fileupload1 != "png") {
             echo "<script>
-            alert('File must be in JPG or PDF format.');
+            alert('File must be in JPG, PNG, or PDF format.');
             window.location.href='Add_Product.php';
             </script>";
-        } else {
+          }
+           else {
             if (move_uploaded_file($_FILES['File_corousel_pic_grial']['tmp_name'], $target) && move_uploaded_file($_FILES['carousal_img_computer']['tmp_name'], $target1)) {
                 echo "<script>
                 alert('Your Data Inserted Successfully'); window.location.href='select_corousel.php';
@@ -74,6 +69,3 @@ if (isset($_POST['Submit'])) {
         echo "<script>alert('Your Data is NOT insert')</script>";
     }
 }
-
-
-?>

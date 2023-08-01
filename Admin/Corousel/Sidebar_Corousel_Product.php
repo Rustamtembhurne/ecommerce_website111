@@ -26,11 +26,12 @@ include "./insert_corousel.php";
 </head>
 
 <body class="body1">
+    
 
-    <nav class="sidebar locked">
+<nav class="sidebar locked">
         <div class="logo_items flex">
             <span class="nav_image">
-                <img src="./img_logo/pexels-jessica-lewis-creative-1010519.jpg" alt="logo_img" />
+                <img src="../sidebar_img_logo/Rustam.jpg" />
             </span>
             <span class="logo_name">RUSTAM</span>
             <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
@@ -44,44 +45,40 @@ include "./insert_corousel.php";
                         <span class="title">Dashboard</span>
                         <span class="line"></span>
                     </div>
+
                     <li class="item">
-                        <a href="#" class="link flex">
-                            <i class="bx bx-home-alt"></i>
-                            <span>Overview</span>
+                        <a href="../Corousel/Sidebar_Corousel_Product.php" class="link flex">
+                            <i class="bx bx-grid-alt"></i>
+                            <span>Corousel</span>
                         </a>
                     </li>
                     <li class="item">
-                        <a href="#" class="link flex">
+                        <a href="../Mobile/mobile.php" class="link flex">
                             <i class="bx bx-grid-alt"></i>
-                            <span>All Projects</span>
+                            <span>Mobile</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="../Computer_Laptop/computer_laptop.php" class="link flex">
+                            <i class="bx bx-grid-alt"></i>
+                            <span>Computer & Laptop</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="../Man_cloth/man_cloth.php" class="link flex">
+                            <i class="bx bx-grid-alt"></i>
+                            <span>Man`s Clothes</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="../Womans_clothes/womans_cloth.php" class="link flex">
+                            <i class="bx bx-grid-alt"></i>
+                            <span>Woman`s Clothes</span>
                         </a>
                     </li>
                 </ul>
 
-                <ul class="menu_item">
-                    <div class="menu_title flex">
-                        <span class="title">Editor</span>
-                        <span class="line"></span>
-                    </div>
-                    <li class="item">
-                        <a href="#" class="link flex">
-                            <i class="bx bxs-magic-wand"></i>
-                            <span>Magic Build</span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="link flex">
-                            <i class="bx bx-folder"></i>
-                            <span>New Projects</span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="link flex">
-                            <i class="bx bx-cloud-upload"></i>
-                            <span>Upload New</span>
-                        </a>
-                    </li>
-                </ul>
+
 
                 <ul class="menu_item">
                     <div class="menu_title flex">
@@ -111,11 +108,11 @@ include "./insert_corousel.php";
 
             <div class="sidebar_profile flex">
                 <span class="nav_image">
-                    <img src="images/profile.jpg" alt="logo_img" />
+                    <img src="../sidebar_img_logo/Rustam.jpg" alt="logo_img" />
                 </span>
                 <div class="data_text">
-                    <span class="name">David Oliva</span>
-                    <span class="email">david@gmail.com</span>
+                    <span class="name">Rustam Tembhurne</span>
+                    <span class="email">rustamtembhurne12@gmail.com</span>
                 </div>
             </div>
         </div>
@@ -137,7 +134,7 @@ include "./insert_corousel.php";
 
                 <div class="col-2">
                     <span class="nav_image">
-                        <img src="./img_logo/annie-spratt-wuc-KEIBrdE-unsplash.jpg" alt="logo_img" />
+                        <img src="../sidebar_img_logo/pngfind.com-rose-border-png-21233.png" alt="logo_img" />
                     </span>
                 </div>
 
@@ -158,9 +155,9 @@ include "./insert_corousel.php";
 
         <form class="container" id="registrationForm" method="POST" enctype="multipart/form-data">
 
-            <div class="row" style="margin-top:200px;">
+            <div class="row" style="margin-top:200px; margin-left: 200px">
 
-
+                 <h1>Carousel</h1>
 
 
                 <!-- # File Uploading 1 [pic & pdf] -->
@@ -184,6 +181,7 @@ include "./insert_corousel.php";
                 </div>
 
 
+
                 <div class="col-12">
                     <fieldset class=" container">
                         <legend class="col-form-label  pt-0">computer Img</legend>
@@ -192,11 +190,11 @@ include "./insert_corousel.php";
                             <div class="col-sm-10 form-control">
                                 <label class="custom-file-label" for="fileInput">Choose File : [ Under 3mb ] JPG & PNG Format Only</label>
                                 <div class="custom-file">
-                                    <img id="previewImage" src="#" width="100px" height="100px" style="display: none;">
-                                    <embed id="previewPDF" src="#" width="100%" height="300px" style="display: none;">
+                                    <img id="previewImage2" src="#" width="100px" height="100px" style="display: none;">
+                                    <embed id="previewPDF2" src="#" width="100%" height="300px" style="display: none;">
 
                                     <input type="file" name="carousal_img_computer" class="custom-file-input" id="fileInput" accept="image/jpeg, image/png, application/pdf" onchange="previewFile(event)" required>
-                                    <button type="submit" name="Upload_file_btn" class="btn btn-info mt-2" id="uploadButton" required>Upload</button>
+                                    <!-- <button type="submit" name="Upload_file_btn" class="btn btn-info mt-2" id="uploadButton2" required>Upload</button> -->
                                 </div>
                             </div>
                         </div>
@@ -210,11 +208,13 @@ include "./insert_corousel.php";
                 <!--  # file ke liye ye dono link requried hi hai... -->
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="./Sidebar_corousel_edit_fileupload_condition.js"></script>
+                <!-- <script src="./Sidebar_corousel_edit_fileupload2_condition.js"></script> -->
                 <!--************************************************************* -->
 
 
                 <!-- # file image & pdf show ( display ) javascript -->
                 <script src='./Sidebar_corousel_pic_display_code.js'></script>
+                <script src='./Sidebar_corousel_pic2_display.js'></script>
                 <!--**************************************************************-->
 
 
@@ -227,7 +227,7 @@ include "./insert_corousel.php";
         </form>
     </div>
 
-    
+
 
 
     <!-- ADD PRODUCT CODE END -->

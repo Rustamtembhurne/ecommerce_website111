@@ -1,3 +1,10 @@
+<?php
+
+include "./Admin/connection.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,14 +49,14 @@
          <nav class="navbar navbar-light bg-light justify-content-between">
             <div id="mySidenav" class="sidenav">
                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-               <a href="index.html">Home</a>
-               <a href="computers.html">Computers</a>
-               <a href="mans_clothes.html">Mans Clothes</a>
-               <a href="womans_clothes.html">Womans Clothes</a>
-               <a href="contact.html">Contact</a>
+               <a href="index.php">Home</a>
+               <a href="computers.php">Computers</a>
+               <a href="mans_clothes.php">Mans Clothes</a>
+               <a href="womans_clothes.php">Womans Clothes</a>
+               <a href="contact.php">Contact</a>
             </div>
             <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()"><img src="images/toggle-icon.png"></span>
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a></a>
+            <a class="navbar-brand" href="index.php"><img src="images/logo.png"></a></a>
             <form class="form-inline ">
                <div class="login_text">
                   <ul>
@@ -102,7 +109,7 @@
    <div class="footer_section layout_padding margin_top_90">
       <div class="container">
          <div class="footer_logo_main">
-            <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+            <div class="footer_logo"><a href="index.php"><img src="images/footer-logo.png"></a></div>
             <div class="social_icon">
                <ul>
                   <li><a href="#"><img src="images/fb-icon.png"></a></li>
@@ -113,6 +120,9 @@
                </ul>
             </div>
          </div>
+
+
+
          <div class="footer_section_2">
             <div class="row">
                <div class="col-lg-3 col-sm-6">
@@ -124,11 +134,11 @@
                   <h4 class="adderss_text">Menu</h4>
                   <div class="footer_menu">
                      <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="computers.html">Computers</a></li>
-                        <li><a href="Mans_clothes.html">Mans Clothes</a></li>
-                        <li><a href="womans_clothes.html">Womans Clothes</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="computers.php">Computers</a></li>
+                        <li><a href="Mans_clothes.php">Mans Clothes</a></li>
+                        <li><a href="womans_clothes.php">Womans Clothes</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                      </ul>
                   </div>
                </div>
@@ -146,24 +156,54 @@
                </div>
                <div class="col-lg-3 col-sm-6">
                   <h4 class="adderss_text">Contact</h4>
-                  <div class="call_text"><img src="images/map-icon.png"><span class="paddlin_left_0"><a href="#">London
-                           145 United Kingdom</a></span></div>
-                  <div class="call_text"><img src="images/call-icon.png"><span class="paddlin_left_0"><a href="#">+7586656566</a></span></div>
-                  <div class="call_text"><img src="images/mail-icon.png"><span class="paddlin_left_0"><a href="#">volim@gmail.com</a></span></div>
+                  <div class="call_text"><img src="images/map-icon.png"><span class="paddlin_left_0"><a href="#">Nagpur Maharashtra</a></span></div>
+                  <div class="call_text"><img src="images/call-icon.png"><span class="paddlin_left_0"><a href="#">+9146729293</a></span></div>
+                  <div class="call_text"><img src="images/mail-icon.png"><span class="paddlin_left_0"><a href="https://mail.google.com/mail/u/0/#inbox">rustamtembhurne@gmail.com</a></span></div>
                </div>
             </div>
+
+
+            <!-- # ebbed google map start.....  -->
+
+            <div class="row">
+               <div class="col-12">
+
+                  <div class="gmap_canvas my-3 d-flex justify-content-center">
+                     <iframe width="100%" height="225px" id="gmap_canvas" src="https://maps.google.com/maps?q=it+park+nagpur&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                     <br>
+                  </div>
+                  <a href="https://embedgooglemap.2yu.co">html embed google map</a>
+               </div>
+            </div>
+            <!-- google map end ..........     -->
+
+
          </div>
       </div>
    </div>
    <!-- footer section end -->
+
+
+
+
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html
-               Templates</a></p>
+         <p class="copyright_text"> Design by <a href="https://github.com/Rustamtembhurne">Rustam Tembhurne
+            </a></p>
       </div>
    </div>
+
    <!-- copyright section end -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
    <!-- Javascript files-->
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>

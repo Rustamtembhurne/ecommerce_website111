@@ -17,7 +17,7 @@ $(document).ready(function() {
       if (fileSize > fileSizeLimit) {
         e.preventDefault(); // Prevent the form from submitting
          alert('File size exceeds the limit. Please choose a file under 10MB.');
-      } else if (!fileUpload.match(/\.(jpg|pdf)$/i)) {
+      } else if (!fileUpload.match(/\.(jpg|png|pdf)$/i)) {
         e.preventDefault(); // Prevent the form from submitting
         alert('Only JPG and PDF formats are allowed.');
       } else {
